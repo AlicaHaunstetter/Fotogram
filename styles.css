@@ -78,3 +78,23 @@ footer {
   background-color: red;
   margin: 4px;
 }
+
+.overlay_mobile {
+  /* background-color: rgba(9, 33, 42, 1); */
+  background-color: red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+}
+
+.closex {
+  width: 24px;
+  height: 24px;
+  background-color: blue;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  margin: 8px;
+}
