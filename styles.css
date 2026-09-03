@@ -2,15 +2,20 @@
   --font-figtree: "Figtree", sans-serif;
 }
 
-.figtree {
-  font-family: var(--font-figtree);
-  font-weight: 600;
-  font-style: normal;
-}
-
 h1 {
   font-family: var(--font-figtree);
   font-size: 48px;
+  font-weight: 800;
+  font-style: bold;
+  text-align: center;
+  color: white;
+}
+
+h2 {
+  font-family: var(--font-figtree);
+  font-size: 24px;
+  font-weight: 800;
+  font-style: bold;
   text-align: center;
   color: white;
 }
@@ -18,7 +23,9 @@ h1 {
 p {
   font-family: var(--font-figtree);
   font-size: 14px;
-  text-align: center;
+  font-weight: 500;
+  font-style: medium;
+  text-align: left;
   color: white;
 }
 
@@ -63,25 +70,34 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: rgba(9, 33, 42, 1);
-  border-top-left-radius: 500px;
-  border-top-right-radius: 500px;
+  border-top-left-radius: 50% 20px;
+  border-top-right-radius: 50% 20px;
   padding-top: 20px;
   margin-top: 50px;
 }
 
-.preview_picture {
+.preview_pictures {
   height: 150px;
   width: 150px;
   border-radius: 16px;
   border: 2px;
   border-color: rgba(18, 70, 88, 1);
-  background-color: red;
   margin: 4px;
+  overflow: hidden;
+}
+
+.preview_pictures img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block; 
 }
 
 .overlay_mobile {
-  /* background-color: rgba(9, 33, 42, 1); */
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(9, 33, 42, 1);
   position: fixed;
   top: 0;
   left: 0;
@@ -89,12 +105,62 @@ footer {
   height: 100dvh;
 }
 
+.overlay_mobile > img {
+  width: 300px;
+  height: auto;
+}
+
+.overlay_mobile > h2 {
+  padding: 50px 30px 10px 30px;
+}
+
 .closex {
-  width: 24px;
-  height: 24px;
-  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
   position: fixed;
-  top: 30px;
-  right: 30px;
-  margin: 8px;
+  top: 24px;
+  right: 24px;
+}
+
+.nav_arrows {
+  display: flex;
+  justify-content: center;
+}
+
+.circle_arrow_left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 20px;
+  left: 60px;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: rgba(253, 91, 79, 0.25);
+}
+
+.circle_arrow_right {
+  transform: scaleX(-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 20px;
+  right: 60px;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: rgba(253, 91, 79, 0.25);
+}
+
+.overlay_mobile p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 30px;
 }
