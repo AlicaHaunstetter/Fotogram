@@ -88,7 +88,7 @@ function templateOverlayMobile(i) {
                         height="14"/>
             </div>
           <h2>Herbsttag ${i + 1}</h2>
-          <img 
+          <img id="overlay-picture"
             src="${allPictures[i]}"
             alt="Herbsttag ${i + 1}"
             width="800"
@@ -115,6 +115,12 @@ function templateOverlayMobile(i) {
             <p>${i + 1}/${allPictures.length}</p>`;
 }
 
-//irgendwie so go to img mit index -1..
-// und oder dem img eine id mit [i] geben und dann sagen geh zu i =- 1
-function showPreviousPicture() {}
+function showPreviousPicture() {
+  currentIndex = (currentIndex - 1 + allPictures.length) % allPictures.length;
+  overlayMobile.innerHTML = templateOverlayMobile(currentIndex);
+}
+
+function showNextPicture() {
+  currentIndex = (currentIndex + 1) % allPictures.length;
+  overlayMobile.innerHTML = templateOverlayMobile(currentIndex);
+}
